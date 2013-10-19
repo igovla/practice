@@ -1,0 +1,14 @@
+{% autoescape off %}
+<h1>Листинг каталога {{ dir_name }}
+<table>
+<tr>
+<th>Name</th>
+<th>Size, bytes</th>
+<th>Last modification time</th>
+</tr>
+{% for item in dir_content %}
+{{ item }}
+
+{% endfor %}
+</table>
+{% endautoescape %}
