@@ -4,9 +4,10 @@ from django.conf.urls import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     url(r'^$', 'pages.views.home'),
-    url(r'^log/(?P<diry>([-,.\w]*/)*)$','pages.views.listing'),
+    url(r'^log/(?P<diry>([-,.\w]*/)*)$', 'pages.views.listing'),
     url(r'^library/$', 'pages.views.books'),
     url(r'^library/books/$', 'pages.views.books'),
     url(r'^library/books/(\d+)/$', 'pages.views.book'),
